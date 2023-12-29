@@ -1,0 +1,149 @@
+.main {
+  max-width: 90%;
+  padding: 20px;
+  background-color: bisque;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  gap: 1rem;
+  height: 100vh;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Article-1 Article-2 Article-3 Sidebar"
+    "Content Content Content Sidebar"
+    "Footer Footer Footer Footer ";
+}
+
+.item {
+  // background-color: red;
+  padding: 10px;
+  // margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+    font-size: 30px;
+  grid-area: Header;
+  background-color: blueviolet;
+  transition: 0.4s;
+}
+
+.header:hover{
+    border: 5px solid rebeccapurple;
+    background-color: transparent;
+    color: rebeccapurple;
+}
+.article1 {
+  grid-area: Article-1;
+  background-color: aqua;
+  font-size: 30px;
+  transition: 0.4s;
+}
+
+.article1:hover{
+    border: 5px solid aqua;
+    background-color: transparent;
+    color: aqua;
+    
+}
+.article2 {
+  grid-area: Article-2;
+  background-color: rgb(255, 0, 132);
+  font-size: 30px;
+  transition: 0.4s;
+}
+
+.article2:hover{
+    border: 5px solid rgb(255, 0, 132);
+    background-color: transparent;
+    color: rgb(255, 0, 132);
+    
+}
+
+.article3 {
+  grid-area: Article-3;
+  background-color: rgb(0, 255, 72);
+  font-size: 30px;
+  transition: 0.4s;
+}
+.article3:hover{
+    border: 5px solid rgb(0, 255, 72);
+    background-color: transparent;
+    color: rgb(0, 255, 72);
+    
+}
+
+.sidebar {
+  grid-area: Sidebar;
+  background-color: rgb(85, 0, 255);
+  font-size: 30px;
+  transition: 0.4s;
+}
+
+.sidebar:hover{
+    border: 5px solid  rgb(85, 0, 255);
+    background-color: transparent;
+    color:  rgb(85, 0, 255);;
+    
+}
+
+.content {
+  grid-area: Content;
+  background-color: rgb(51, 153, 112);
+  font-size: 30px;
+  transition: 0.4s;
+}
+.content:hover{
+    border: 5px solid rgb(51, 153, 112);
+    background-color: transparent;
+    color:  rgb(51, 153, 112);
+    
+}
+
+.footer {
+  grid-area: Footer;
+  background-color: rgb(76, 96, 45);
+  font-size: 30px;
+  transition: 0.4s;
+  a{
+    color: black;
+  }
+}
+
+.footer:hover{
+    border: 5px solid rgb(76, 96, 45);
+    background-color: transparent;
+    a{
+        color:  rgb(76, 96, 45);
+    }
+    
+}
+
+@media (max-width:768px){
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "Header Header Header"
+          "Article-1 Article-2 Article-3"
+          "Content Content Sidebar "
+          "Footer Footer Footer ";
+      }
+}
+
+
+
+@media (max-width:576px){
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "Header "
+          "Article-1"
+          "Article-2"
+          "Article-3"
+          "Content"
+          "Sidebar"
+          "Footer";
+      }
+}
